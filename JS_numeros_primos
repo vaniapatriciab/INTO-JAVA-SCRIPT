@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Primos</title>
+</head>
+    <style>
+        body {
+    background-color: rgb(204, 233, 240);
+    color: rgb(17, 17, 17);
+    font: normal 20pt arial;
+    align-items: center;
+    }
+</style>
+    <script>
+        function isPrimo(value){
+        var d = 0
+        for(var i = 1; i <= value; i++)
+        if(value % i == 0)
+        d++
+        return d == 2
+        }
+
+        function comparativo(){
+        var inicio, fim
+        var numPrimos = ''
+        inicio = document.getElementById('a').value
+        fim = document.getElementById('b').value
+        for(var i = inicio; i <= fim; i++)
+        if(isPrimo(i) == true)
+        numPrimos += i + ' ; '
+        document.getElementById('primos').innerHTML = numPrimos
+        }
+        
+    </script>
+    <body>
+        <h1>Descubra qual número é primo</h1>
+        <br>
+        <form>Valor 1 <input id="a" type="text"/><br>
+        Valor 2 <input id="b" type="text"/></form>
+        <div id="primos"></div>
+        <button onclick="comparativo();">Mostrar números primos</button>
+</body>
+</html>
