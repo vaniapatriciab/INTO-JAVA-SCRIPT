@@ -1,2 +1,1 @@
-# INTO-JAVA-SCRIPT
-JAVASCRIPT INTRODUCTION
+Estudos em Javascript para Faculdade de Sistemas de Informação
